@@ -1,9 +1,9 @@
 const print = require("../src/index");
 
     describe("index", () => {
-        test("should print string message if they receive the message", () => {
-            const expected = "Hola soy un test";
-            const result = print();
+        test("should print message server port", () => {
+            const expected = "server on port 3000";
+            const result = listen();
             expect(expected).toBe(result);
         });
     });

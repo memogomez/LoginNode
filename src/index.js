@@ -1,7 +1,9 @@
-function print(){
-    return "Hola soy un test";
-}
+const app = require('./config/server.js');
 
-console.log(print());
+require('./app/routes/usuarios')(app);
 
-module.exports = print;
+// Iniciar el server
+
+app.listen(app.get('port'), () =>{
+    console.log('server on port', app.get('port'));
+});
